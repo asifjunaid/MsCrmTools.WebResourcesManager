@@ -35,11 +35,11 @@ namespace MscrmTools.WebresourcesManager
         private SettingsDialog sd;
         private Settings settings;
         private WebresourcesTreeView tv;
-
+        private AutoResponderDialog autoResponderDialog;
         #region IGitHubPlugin
 
         public virtual string RepositoryName => "MsCrmTools.WebResourcesManager";
-        public virtual string UserName => "MscrmTools";
+        public virtual string UserName => "asifjunaid";
 
         #endregion IGitHubPlugin
 
@@ -70,19 +70,27 @@ namespace MscrmTools.WebresourcesManager
             sd.Show(dpMain, DockState.DockRightAutoHide);
 
             onTvItemClickedMap = InitializeOnTvItemClickedMap();
+
+            autoResponderDialog = new AutoResponderDialog(this);
+            autoResponderDialog.Show(dpMain, DockState.DockRightAutoHide);
         }
 
         public ObservableCollection<Webresource> WebresourcesCache { get; set; } = new ObservableCollection<Webresource>();
 
         public override void ClosingPlugin(PluginCloseInfo info)
         {
-            settings.TreeviewDockState = tv.DockState;
-            settings.PendingUpdatesDockState = pud.DockState;
-            settings.SettingsDockState = sd.DockState;
-            settings.PropertiesDockState = rpd.DockState;
+            if (settings != null)
+            {
+                settings.TreeviewDockState = tv.DockState;
+                settings.PendingUpdatesDockState = pud.DockState;
+                settings.SettingsDockState = sd.DockState;
+                settings.PropertiesDockState = rpd.DockState;
 
-            settings.Save(ConnectionDetail?.ConnectionId.ToString());
-
+                settings.Save(ConnectionDetail?.ConnectionId.ToString());
+            }
+            if (autoResponderDialog != null && !autoResponderDialog.IsDisposed) {
+                autoResponderDialog.StopAutoResponder();
+            }
             base.ClosingPlugin(info);
         }
 
@@ -171,7 +179,8 @@ namespace MscrmTools.WebresourcesManager
                 if (!Webresource.Columns.Columns.Contains("dependencyxml")) Webresource.Columns.Columns.Add("dependencyxml");
                 if (!Webresource.LazyLoadingColumns.Columns.Contains("dependencyxml")) Webresource.LazyLoadingColumns.Columns.Add("dependencyxml");
             }
-
+            if (autoResponderDialog != null && !autoResponderDialog.IsDisposed)
+                autoResponderDialog.UpdateConnection(settings);
             base.UpdateConnection(newService, detail, actionName, parameter);
         }
 
@@ -1323,5 +1332,24 @@ Are you sure you want to delete this webresource?",
         }
 
         #endregion IShortcutReceiver
-    }
-}
+
+        #region Auto Responder Menu Items Events
+
+        private void tsDDAutoReponderMenu_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            //ExecuteMethod(LoadWebresourcesGeneral, false);
+            if (e.ClickedItem == tsmiConfigure)
+            {
+                if (autoResponderDialog == null || autoResponderDialog.IsDisposed)
+                    autoResponderDialog = new AutoResponderDialog(this);
+
+                autoResponderDialog.Show(dpMain, DockState.DockRightAutoHide);
+                autoResponderDialog.ShowDocked();
+
+                //AutoResponderDialog dialog = new AutoResponderDialog();
+                //dialog.ShowDialog();
+            }
+        }
+
+        #endregion Auto Responder Menu Items Events
+    }}

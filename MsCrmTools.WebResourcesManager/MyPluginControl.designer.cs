@@ -89,9 +89,12 @@
             this.tssResource5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiProperties = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTabs = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsTabsCloseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTabsCloseThis = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsTabsCloseExceptThis = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsTabsCloseAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsDDAutoReponderMenu = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsmiConfigure = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenu.SuspendLayout();
             this.cmsWebresourceTreeview.SuspendLayout();
             this.cmsTabs.SuspendLayout();
@@ -107,12 +110,13 @@
             this.toolStripSeparator2,
             this.tsddWindow,
             this.toolStripSeparator3,
-            this.tsddTools});
+            this.tsddTools,
+            this.toolStripSeparator4,
+            this.tsDDAutoReponderMenu});
             this.toolStripMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
-            this.toolStripMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStripMenu.Size = new System.Drawing.Size(1024, 37);
+            this.toolStripMenu.Size = new System.Drawing.Size(559, 25);
             this.toolStripMenu.TabIndex = 4;
             this.toolStripMenu.Text = "mainToolStrip";
             // 
@@ -129,7 +133,7 @@
             this.tsddCrmMenu.Image = ((System.Drawing.Image)(resources.GetObject("tsddCrmMenu.Image")));
             this.tsddCrmMenu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsddCrmMenu.Name = "tsddCrmMenu";
-            this.tsddCrmMenu.Size = new System.Drawing.Size(107, 34);
+            this.tsddCrmMenu.Size = new System.Drawing.Size(62, 22);
             this.tsddCrmMenu.Text = "CRM";
             this.tsddCrmMenu.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsddCrmMenu_DropDownItemClicked);
             // 
@@ -137,19 +141,19 @@
             // 
             this.TsmiLoadWebResources.Image = ((System.Drawing.Image)(resources.GetObject("TsmiLoadWebResources.Image")));
             this.TsmiLoadWebResources.Name = "TsmiLoadWebResources";
-            this.TsmiLoadWebResources.Size = new System.Drawing.Size(656, 34);
+            this.TsmiLoadWebResources.Size = new System.Drawing.Size(388, 22);
             this.TsmiLoadWebResources.Text = "Load Web resources";
             // 
             // TsmiLoadWebResourcesFromASpecificSolution
             // 
             this.TsmiLoadWebResourcesFromASpecificSolution.Name = "TsmiLoadWebResourcesFromASpecificSolution";
-            this.TsmiLoadWebResourcesFromASpecificSolution.Size = new System.Drawing.Size(656, 34);
+            this.TsmiLoadWebResourcesFromASpecificSolution.Size = new System.Drawing.Size(388, 22);
             this.TsmiLoadWebResourcesFromASpecificSolution.Text = "Load Web resources from a specific solution";
             // 
             // tsmiReloadFromCurrentSolution
             // 
             this.tsmiReloadFromCurrentSolution.Name = "tsmiReloadFromCurrentSolution";
-            this.tsmiReloadFromCurrentSolution.Size = new System.Drawing.Size(656, 34);
+            this.tsmiReloadFromCurrentSolution.Size = new System.Drawing.Size(388, 22);
             this.tsmiReloadFromCurrentSolution.Tag = "Reload from {0} ({1})";
             this.tsmiReloadFromCurrentSolution.Text = "Reload";
             this.tsmiReloadFromCurrentSolution.Visible = false;
@@ -157,33 +161,33 @@
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(653, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(385, 6);
             // 
             // tsmiUpdateWebresources
             // 
             this.tsmiUpdateWebresources.Image = ((System.Drawing.Image)(resources.GetObject("tsmiUpdateWebresources.Image")));
             this.tsmiUpdateWebresources.Name = "tsmiUpdateWebresources";
-            this.tsmiUpdateWebresources.Size = new System.Drawing.Size(656, 34);
+            this.tsmiUpdateWebresources.Size = new System.Drawing.Size(388, 22);
             this.tsmiUpdateWebresources.Text = "Update checked Web resources";
             // 
             // tsmiUpdatePublishWebresources
             // 
             this.tsmiUpdatePublishWebresources.Image = ((System.Drawing.Image)(resources.GetObject("tsmiUpdatePublishWebresources.Image")));
             this.tsmiUpdatePublishWebresources.Name = "tsmiUpdatePublishWebresources";
-            this.tsmiUpdatePublishWebresources.Size = new System.Drawing.Size(656, 34);
+            this.tsmiUpdatePublishWebresources.Size = new System.Drawing.Size(388, 22);
             this.tsmiUpdatePublishWebresources.Text = "Update and publish checked Web resources";
             // 
             // tsmiUpdatePublishAddWebresources
             // 
             this.tsmiUpdatePublishAddWebresources.Image = ((System.Drawing.Image)(resources.GetObject("tsmiUpdatePublishAddWebresources.Image")));
             this.tsmiUpdatePublishAddWebresources.Name = "tsmiUpdatePublishAddWebresources";
-            this.tsmiUpdatePublishAddWebresources.Size = new System.Drawing.Size(656, 34);
+            this.tsmiUpdatePublishAddWebresources.Size = new System.Drawing.Size(388, 22);
             this.tsmiUpdatePublishAddWebresources.Text = "Update, publish and add to solution checked web resources";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 37);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // tsddFileMenu
             // 
@@ -194,7 +198,7 @@
             this.tsddFileMenu.Image = ((System.Drawing.Image)(resources.GetObject("tsddFileMenu.Image")));
             this.tsddFileMenu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsddFileMenu.Name = "tsddFileMenu";
-            this.tsddFileMenu.Size = new System.Drawing.Size(93, 34);
+            this.tsddFileMenu.Size = new System.Drawing.Size(54, 22);
             this.tsddFileMenu.Text = "File";
             this.tsddFileMenu.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsddFileMenu_DropDownItemClicked);
             // 
@@ -202,27 +206,27 @@
             // 
             this.tsmiLoadFromDisk.Image = ((System.Drawing.Image)(resources.GetObject("tsmiLoadFromDisk.Image")));
             this.tsmiLoadFromDisk.Name = "tsmiLoadFromDisk";
-            this.tsmiLoadFromDisk.Size = new System.Drawing.Size(548, 34);
+            this.tsmiLoadFromDisk.Size = new System.Drawing.Size(327, 22);
             this.tsmiLoadFromDisk.Text = "Load Web resources";
             // 
             // tsmiSaveToDiskWithRoots
             // 
             this.tsmiSaveToDiskWithRoots.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSaveToDiskWithRoots.Image")));
             this.tsmiSaveToDiskWithRoots.Name = "tsmiSaveToDiskWithRoots";
-            this.tsmiSaveToDiskWithRoots.Size = new System.Drawing.Size(548, 34);
+            this.tsmiSaveToDiskWithRoots.Size = new System.Drawing.Size(327, 22);
             this.tsmiSaveToDiskWithRoots.Text = "Save checked Web resources (with roots) to disk";
             // 
             // tsmiSaveToDisk
             // 
             this.tsmiSaveToDisk.Image = ((System.Drawing.Image)(resources.GetObject("tsmiSaveToDisk.Image")));
             this.tsmiSaveToDisk.Name = "tsmiSaveToDisk";
-            this.tsmiSaveToDisk.Size = new System.Drawing.Size(548, 34);
+            this.tsmiSaveToDisk.Size = new System.Drawing.Size(327, 22);
             this.tsmiSaveToDisk.Text = "Save checked Web resources to disk";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 37);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // tsddWindow
             // 
@@ -235,38 +239,38 @@
             this.tsddWindow.Image = ((System.Drawing.Image)(resources.GetObject("tsddWindow.Image")));
             this.tsddWindow.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsddWindow.Name = "tsddWindow";
-            this.tsddWindow.Size = new System.Drawing.Size(110, 34);
+            this.tsddWindow.Size = new System.Drawing.Size(64, 22);
             this.tsddWindow.Text = "Window";
             this.tsddWindow.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsddWindow_DropDownItemClicked);
             // 
             // tsmiWebresourcesExplorer
             // 
             this.tsmiWebresourcesExplorer.Name = "tsmiWebresourcesExplorer";
-            this.tsmiWebresourcesExplorer.Size = new System.Drawing.Size(315, 34);
+            this.tsmiWebresourcesExplorer.Size = new System.Drawing.Size(194, 22);
             this.tsmiWebresourcesExplorer.Text = "Webresources Explorer";
             // 
             // tsmiPendingUpdates
             // 
             this.tsmiPendingUpdates.Name = "tsmiPendingUpdates";
-            this.tsmiPendingUpdates.Size = new System.Drawing.Size(315, 34);
+            this.tsmiPendingUpdates.Size = new System.Drawing.Size(194, 22);
             this.tsmiPendingUpdates.Text = "Pending Updates";
             // 
             // tsmiMainProperties
             // 
             this.tsmiMainProperties.Name = "tsmiMainProperties";
-            this.tsmiMainProperties.Size = new System.Drawing.Size(315, 34);
+            this.tsmiMainProperties.Size = new System.Drawing.Size(194, 22);
             this.tsmiMainProperties.Text = "Properties";
             // 
             // tsmiSettings
             // 
             this.tsmiSettings.Name = "tsmiSettings";
-            this.tsmiSettings.Size = new System.Drawing.Size(315, 34);
+            this.tsmiSettings.Size = new System.Drawing.Size(194, 22);
             this.tsmiSettings.Text = "Settings";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 37);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // tsddTools
             // 
@@ -277,14 +281,14 @@
             this.tsddTools.Image = ((System.Drawing.Image)(resources.GetObject("tsddTools.Image")));
             this.tsddTools.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsddTools.Name = "tsddTools";
-            this.tsddTools.Size = new System.Drawing.Size(81, 34);
+            this.tsddTools.Size = new System.Drawing.Size(47, 22);
             this.tsddTools.Text = "Tools";
             this.tsddTools.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsddTools_DropDownItemClicked);
             // 
             // findWebresourcesWithoutDependenciesToolStripMenuItem
             // 
             this.findWebresourcesWithoutDependenciesToolStripMenuItem.Name = "findWebresourcesWithoutDependenciesToolStripMenuItem";
-            this.findWebresourcesWithoutDependenciesToolStripMenuItem.Size = new System.Drawing.Size(485, 34);
+            this.findWebresourcesWithoutDependenciesToolStripMenuItem.Size = new System.Drawing.Size(292, 22);
             this.findWebresourcesWithoutDependenciesToolStripMenuItem.Text = "Find webresources without dependencies";
             // 
             // toolStripMenuItem1
@@ -293,20 +297,20 @@
             this.toCSVToolStripMenuItem,
             this.toClipboardToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(485, 34);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(292, 22);
             this.toolStripMenuItem1.Text = "Export selected webresources";
             this.toolStripMenuItem1.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsddTools_DropDownItemClicked);
             // 
             // toCSVToolStripMenuItem
             // 
             this.toCSVToolStripMenuItem.Name = "toCSVToolStripMenuItem";
-            this.toCSVToolStripMenuItem.Size = new System.Drawing.Size(220, 34);
+            this.toCSVToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.toCSVToolStripMenuItem.Text = "To CSV";
             // 
             // toClipboardToolStripMenuItem
             // 
             this.toClipboardToolStripMenuItem.Name = "toClipboardToolStripMenuItem";
-            this.toClipboardToolStripMenuItem.Size = new System.Drawing.Size(220, 34);
+            this.toClipboardToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.toClipboardToolStripMenuItem.Text = "To Clipboard";
             // 
             // dpMain
@@ -314,10 +318,9 @@
             this.dpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dpMain.DockBackColor = System.Drawing.Color.White;
             this.dpMain.DocumentStyle = WeifenLuo.WinFormsUI.Docking.DocumentStyle.DockingWindow;
-            this.dpMain.Location = new System.Drawing.Point(0, 37);
-            this.dpMain.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.dpMain.Location = new System.Drawing.Point(0, 25);
             this.dpMain.Name = "dpMain";
-            this.dpMain.Size = new System.Drawing.Size(1024, 517);
+            this.dpMain.Size = new System.Drawing.Size(559, 275);
             this.dpMain.TabIndex = 5;
             // 
             // cmsWebresourceTreeview
@@ -348,14 +351,14 @@
             this.tssResource5,
             this.tsmiProperties});
             this.cmsWebresourceTreeview.Name = "contextMenuStripTreeView";
-            this.cmsWebresourceTreeview.Size = new System.Drawing.Size(551, 624);
+            this.cmsWebresourceTreeview.Size = new System.Drawing.Size(338, 420);
             this.cmsWebresourceTreeview.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmsWebresourceTreeview_ItemClicked);
             // 
             // tsmiAddExistingFile
             // 
             this.tsmiAddExistingFile.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAddExistingFile.Image")));
             this.tsmiAddExistingFile.Name = "tsmiAddExistingFile";
-            this.tsmiAddExistingFile.Size = new System.Drawing.Size(562, 34);
+            this.tsmiAddExistingFile.Size = new System.Drawing.Size(337, 22);
             this.tsmiAddExistingFile.Text = "Add existing file(s) as Web resource(s)";
             // 
             // tsmiAddNewResource
@@ -369,179 +372,179 @@
             this.tsmiNewResx});
             this.tsmiAddNewResource.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAddNewResource.Image")));
             this.tsmiAddNewResource.Name = "tsmiAddNewResource";
-            this.tsmiAddNewResource.Size = new System.Drawing.Size(562, 34);
+            this.tsmiAddNewResource.Size = new System.Drawing.Size(337, 22);
             this.tsmiAddNewResource.Text = "Add new empty web resource";
             this.tsmiAddNewResource.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmsWebresourceTreeview_ItemClicked);
             // 
             // tsmiNewHtml
             // 
             this.tsmiNewHtml.Name = "tsmiNewHtml";
-            this.tsmiNewHtml.Size = new System.Drawing.Size(270, 34);
+            this.tsmiNewHtml.Size = new System.Drawing.Size(170, 22);
             this.tsmiNewHtml.Text = "Web Page (HTML)";
             // 
             // tsmiNewCss
             // 
             this.tsmiNewCss.Name = "tsmiNewCss";
-            this.tsmiNewCss.Size = new System.Drawing.Size(270, 34);
+            this.tsmiNewCss.Size = new System.Drawing.Size(170, 22);
             this.tsmiNewCss.Text = "Style Sheet (CSS)";
             // 
             // tsmiNewScript
             // 
             this.tsmiNewScript.Name = "tsmiNewScript";
-            this.tsmiNewScript.Size = new System.Drawing.Size(270, 34);
+            this.tsmiNewScript.Size = new System.Drawing.Size(170, 22);
             this.tsmiNewScript.Text = "Script (JScript)";
             // 
             // tsmiNewData
             // 
             this.tsmiNewData.Name = "tsmiNewData";
-            this.tsmiNewData.Size = new System.Drawing.Size(270, 34);
+            this.tsmiNewData.Size = new System.Drawing.Size(170, 22);
             this.tsmiNewData.Text = "Data (XML)";
             // 
             // tsmiNewXsl
             // 
             this.tsmiNewXsl.Name = "tsmiNewXsl";
-            this.tsmiNewXsl.Size = new System.Drawing.Size(270, 34);
+            this.tsmiNewXsl.Size = new System.Drawing.Size(170, 22);
             this.tsmiNewXsl.Text = "Style Sheet (XSL)";
             // 
             // tsmiNewResx
             // 
             this.tsmiNewResx.Name = "tsmiNewResx";
-            this.tsmiNewResx.Size = new System.Drawing.Size(270, 34);
+            this.tsmiNewResx.Size = new System.Drawing.Size(170, 22);
             this.tsmiNewResx.Text = "Resources (RESX)";
             // 
             // tsmiAddNewFolder
             // 
             this.tsmiAddNewFolder.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAddNewFolder.Image")));
             this.tsmiAddNewFolder.Name = "tsmiAddNewFolder";
-            this.tsmiAddNewFolder.Size = new System.Drawing.Size(562, 34);
+            this.tsmiAddNewFolder.Size = new System.Drawing.Size(337, 22);
             this.tsmiAddNewFolder.Text = "Add new folder";
             // 
             // tssFolder1
             // 
             this.tssFolder1.Name = "tssFolder1";
-            this.tssFolder1.Size = new System.Drawing.Size(559, 6);
+            this.tssFolder1.Size = new System.Drawing.Size(334, 6);
             // 
             // tsmiCollapse
             // 
             this.tsmiCollapse.Name = "tsmiCollapse";
-            this.tsmiCollapse.Size = new System.Drawing.Size(562, 34);
+            this.tsmiCollapse.Size = new System.Drawing.Size(337, 22);
             this.tsmiCollapse.Text = "Collapse (including childrens)";
             // 
             // tsmiExpand
             // 
             this.tsmiExpand.Name = "tsmiExpand";
-            this.tsmiExpand.Size = new System.Drawing.Size(562, 34);
+            this.tsmiExpand.Size = new System.Drawing.Size(337, 22);
             this.tsmiExpand.Text = "Expand (including childrens)";
             // 
             // tssFolder2
             // 
             this.tssFolder2.Name = "tssFolder2";
-            this.tssFolder2.Size = new System.Drawing.Size(559, 6);
+            this.tssFolder2.Size = new System.Drawing.Size(334, 6);
             // 
             // tsmiUpdateFolderFromDisk
             // 
             this.tsmiUpdateFolderFromDisk.Name = "tsmiUpdateFolderFromDisk";
-            this.tsmiUpdateFolderFromDisk.Size = new System.Drawing.Size(562, 34);
+            this.tsmiUpdateFolderFromDisk.Size = new System.Drawing.Size(337, 22);
             this.tsmiUpdateFolderFromDisk.Text = "Update web resources in this folder with local files";
             // 
             // tsmiRenameWebresource
             // 
             this.tsmiRenameWebresource.Name = "tsmiRenameWebresource";
-            this.tsmiRenameWebresource.Size = new System.Drawing.Size(562, 34);
+            this.tsmiRenameWebresource.Size = new System.Drawing.Size(337, 22);
             this.tsmiRenameWebresource.Text = "Rename web resource";
             // 
             // tsmiRefreshFileFromDisk
             // 
             this.tsmiRefreshFileFromDisk.Name = "tsmiRefreshFileFromDisk";
-            this.tsmiRefreshFileFromDisk.Size = new System.Drawing.Size(562, 34);
+            this.tsmiRefreshFileFromDisk.Size = new System.Drawing.Size(337, 22);
             this.tsmiRefreshFileFromDisk.Text = "Refresh from disk";
             // 
             // tsmiGetLatest
             // 
             this.tsmiGetLatest.Image = ((System.Drawing.Image)(resources.GetObject("tsmiGetLatest.Image")));
             this.tsmiGetLatest.Name = "tsmiGetLatest";
-            this.tsmiGetLatest.Size = new System.Drawing.Size(562, 34);
+            this.tsmiGetLatest.Size = new System.Drawing.Size(337, 22);
             this.tsmiGetLatest.Text = "Get latest version";
             this.tsmiGetLatest.ToolTipText = "Get latest version from Microsoft Dynamics CRM connected organization";
             // 
             // tssResource1
             // 
             this.tssResource1.Name = "tssResource1";
-            this.tssResource1.Size = new System.Drawing.Size(559, 6);
+            this.tssResource1.Size = new System.Drawing.Size(334, 6);
             // 
             // tsmiUpdate
             // 
             this.tsmiUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsmiUpdate.Image")));
             this.tsmiUpdate.Name = "tsmiUpdate";
-            this.tsmiUpdate.Size = new System.Drawing.Size(562, 34);
+            this.tsmiUpdate.Size = new System.Drawing.Size(337, 22);
             this.tsmiUpdate.Text = "Save to CRM server";
             // 
             // tsmiUpdatePublish
             // 
             this.tsmiUpdatePublish.Image = ((System.Drawing.Image)(resources.GetObject("tsmiUpdatePublish.Image")));
             this.tsmiUpdatePublish.Name = "tsmiUpdatePublish";
-            this.tsmiUpdatePublish.Size = new System.Drawing.Size(562, 34);
+            this.tsmiUpdatePublish.Size = new System.Drawing.Size(337, 22);
             this.tsmiUpdatePublish.Text = "Save and Publish to CRM server";
             // 
             // tsmiUpdatePublishAdd
             // 
             this.tsmiUpdatePublishAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsmiUpdatePublishAdd.Image")));
             this.tsmiUpdatePublishAdd.Name = "tsmiUpdatePublishAdd";
-            this.tsmiUpdatePublishAdd.Size = new System.Drawing.Size(562, 34);
+            this.tsmiUpdatePublishAdd.Size = new System.Drawing.Size(337, 22);
             this.tsmiUpdatePublishAdd.Text = "Save, publish and add to solution";
             // 
             // tssResource2
             // 
             this.tssResource2.Name = "tssResource2";
-            this.tssResource2.Size = new System.Drawing.Size(559, 6);
+            this.tssResource2.Size = new System.Drawing.Size(334, 6);
             // 
             // tsmiDelete
             // 
             this.tsmiDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsmiDelete.Image")));
             this.tsmiDelete.Name = "tsmiDelete";
-            this.tsmiDelete.Size = new System.Drawing.Size(562, 34);
+            this.tsmiDelete.Size = new System.Drawing.Size(337, 22);
             this.tsmiDelete.Text = "Delete";
             // 
             // tssResource3
             // 
             this.tssResource3.Name = "tssResource3";
-            this.tssResource3.Size = new System.Drawing.Size(559, 6);
+            this.tssResource3.Size = new System.Drawing.Size(334, 6);
             // 
             // tsmiOpenInCrm
             // 
             this.tsmiOpenInCrm.Image = ((System.Drawing.Image)(resources.GetObject("tsmiOpenInCrm.Image")));
             this.tsmiOpenInCrm.Name = "tsmiOpenInCrm";
-            this.tsmiOpenInCrm.Size = new System.Drawing.Size(562, 34);
+            this.tsmiOpenInCrm.Size = new System.Drawing.Size(337, 22);
             this.tsmiOpenInCrm.Text = "Open web resource record in CRM application";
             // 
             // tsmiCopyNameToClipboard
             // 
             this.tsmiCopyNameToClipboard.Image = ((System.Drawing.Image)(resources.GetObject("tsmiCopyNameToClipboard.Image")));
             this.tsmiCopyNameToClipboard.Name = "tsmiCopyNameToClipboard";
-            this.tsmiCopyNameToClipboard.Size = new System.Drawing.Size(562, 34);
+            this.tsmiCopyNameToClipboard.Size = new System.Drawing.Size(337, 22);
             this.tsmiCopyNameToClipboard.Text = "Copy web resource name to clipboard ";
             // 
             // tssResource4
             // 
             this.tssResource4.Name = "tssResource4";
-            this.tssResource4.Size = new System.Drawing.Size(559, 6);
+            this.tssResource4.Size = new System.Drawing.Size(334, 6);
             // 
             // tsmiSetDependencies
             // 
             this.tsmiSetDependencies.Name = "tsmiSetDependencies";
-            this.tsmiSetDependencies.Size = new System.Drawing.Size(562, 34);
+            this.tsmiSetDependencies.Size = new System.Drawing.Size(337, 22);
             this.tsmiSetDependencies.Text = "Set dependencies";
             // 
             // tssResource5
             // 
             this.tssResource5.Name = "tssResource5";
-            this.tssResource5.Size = new System.Drawing.Size(559, 6);
+            this.tssResource5.Size = new System.Drawing.Size(334, 6);
             // 
             // tsmiProperties
             // 
             this.tsmiProperties.Image = ((System.Drawing.Image)(resources.GetObject("tsmiProperties.Image")));
             this.tsmiProperties.Name = "tsmiProperties";
-            this.tsmiProperties.Size = new System.Drawing.Size(562, 34);
+            this.tsmiProperties.Size = new System.Drawing.Size(337, 22);
             this.tsmiProperties.Text = "Properties";
             // 
             // cmsTabs
@@ -551,36 +554,58 @@
             this.cmsTabsCloseExceptThis,
             this.cmsTabsCloseAll});
             this.cmsTabs.Name = "cmsTabs";
-            this.cmsTabs.Size = new System.Drawing.Size(306, 144);
+            this.cmsTabs.Size = new System.Drawing.Size(199, 70);
             this.cmsTabs.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmsTabs_ItemClicked);
-            // 
-            // cmsTabsCloseAll
-            // 
-            this.cmsTabsCloseAll.Name = "cmsTabsCloseAll";
-            this.cmsTabsCloseAll.Size = new System.Drawing.Size(305, 34);
-            this.cmsTabsCloseAll.Text = "Close all tabs";
             // 
             // cmsTabsCloseThis
             // 
             this.cmsTabsCloseThis.Name = "cmsTabsCloseThis";
-            this.cmsTabsCloseThis.Size = new System.Drawing.Size(305, 34);
+            this.cmsTabsCloseThis.Size = new System.Drawing.Size(198, 22);
             this.cmsTabsCloseThis.Text = "Close this tab";
             // 
             // cmsTabsCloseExceptThis
             // 
             this.cmsTabsCloseExceptThis.Name = "cmsTabsCloseExceptThis";
-            this.cmsTabsCloseExceptThis.Size = new System.Drawing.Size(305, 34);
+            this.cmsTabsCloseExceptThis.Size = new System.Drawing.Size(198, 22);
             this.cmsTabsCloseExceptThis.Text = "Close all except this tab";
+            // 
+            // cmsTabsCloseAll
+            // 
+            this.cmsTabsCloseAll.Name = "cmsTabsCloseAll";
+            this.cmsTabsCloseAll.Size = new System.Drawing.Size(198, 22);
+            this.cmsTabsCloseAll.Text = "Close all tabs";
+            // 
+            // tsDDAutoReponderMenu
+            // 
+            this.tsDDAutoReponderMenu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsDDAutoReponderMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiConfigure});
+            this.tsDDAutoReponderMenu.Image = ((System.Drawing.Image)(resources.GetObject("tsDDAutoReponderMenu.Image")));
+            this.tsDDAutoReponderMenu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsDDAutoReponderMenu.Name = "tsDDAutoReponderMenu";
+            this.tsDDAutoReponderMenu.Size = new System.Drawing.Size(105, 22);
+            this.tsDDAutoReponderMenu.Text = "Auto Responder";
+            this.tsDDAutoReponderMenu.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsDDAutoReponderMenu_DropDownItemClicked);
+            // 
+            // tsmiConfigure
+            // 
+            this.tsmiConfigure.Name = "tsmiConfigure";
+            this.tsmiConfigure.Size = new System.Drawing.Size(180, 22);
+            this.tsmiConfigure.Text = "Configure";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // MyPluginControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dpMain);
             this.Controls.Add(this.toolStripMenu);
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "MyPluginControl";
-            this.Size = new System.Drawing.Size(1024, 554);
+            this.Size = new System.Drawing.Size(559, 300);
             this.Load += new System.EventHandler(this.MyPluginControl_Load);
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
@@ -654,5 +679,8 @@
         private System.Windows.Forms.ToolStripMenuItem cmsTabsCloseAll;
         private System.Windows.Forms.ToolStripMenuItem cmsTabsCloseThis;
         private System.Windows.Forms.ToolStripMenuItem cmsTabsCloseExceptThis;
+        private System.Windows.Forms.ToolStripDropDownButton tsDDAutoReponderMenu;
+        private System.Windows.Forms.ToolStripMenuItem tsmiConfigure;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
